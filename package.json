@@ -1,8 +1,8 @@
 {
-  "name": "sustainable-webpage",
+  "name": "TimeklaLapa1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://emcofa.github.io/sustainable-webpage/",
+  "homepage": "https://github.com/DeAvZ801/TimeklaLapa1",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",

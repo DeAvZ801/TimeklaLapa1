@@ -1,0 +1,58 @@
+.section {max-width: 1200px;margin: 0 auto;padding: 20px;text-align: center;}
+.section__title {margin-bottom: 20px;font-size: 24px;color: var(--color-white)}
+.section__description {margin-bottom: 30px;font-size: 16px;color: var(--color-white)}
+.columns {display: flex;justify-content: space-around;gap: 20px;}
+.column {flex-basis: calc(33.333% - 20px);padding: 20px;background-color: var(--color-bg-variant);border-radius: 8px;}
+.column__icon {width: 50px;height: auto;margin-bottom: 15px;animation: rotate 5s linear infinite;}
+.column__title {margin-bottom: 10px;color: var(--color-primary-light);font-size: 20px;}
+.column__text {margin-bottom: 15px;color: #666;font-size: 14px;}
+.column__button {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  background-color: var(--color-primary); /* Zila krāsa */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.column__button:hover {
+  background-color: var(--color-primary-variant); /* Zaļa krāsa */
+  color: #fff;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.section {
+
+    background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+  }
+
+
+
+/* Piešķiriet section elementam pilnu lapas augstumu un platumu, ja tas ir nepieciešams */
+.section {
+  min-height: 70vh; /* Pilns ekrāna augstums */
+  min-width: 100vw;  /* Pilns ekrāna platums */
+  overflow: hidden;  /* Novērš potenciālo ritjoslu iekšpusē elementa */
+}

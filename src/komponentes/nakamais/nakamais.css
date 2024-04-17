@@ -1,0 +1,225 @@
+.nakamais-container {
+    position: relative;
+}
+
+.nakamais-container-button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+}
+
+
+.nakamais-button {
+    text-align: center;
+}
+
+.nakamais-button button:hover {
+    background-color: var(--color-primary-variant);
+    animation: shake 0.8s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+
+.nakamais-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.moving__svg {
+    margin-left: 10px;
+    width: 50px;
+    animation-name: scale, size;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-10px) rotate(-5deg);
+    }
+
+    40% {
+        transform: translateX(10px) rotate(5deg);
+    }
+
+    60% {
+        transform: translateX(-10px) rotate(-5deg);
+    }
+
+    80% {
+        transform: translateX(10px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.nakamais-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.764);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nakamais-gallery {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.nakamais-gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.nakamais-gallery img.active {
+    opacity: 1;
+}
+
+.nakamais-gallery button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 20px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    font-size: 1rem;
+    color: var(--color-white);
+}
+
+.nakamais-gallery button:hover {
+    opacity: 0.7;
+}
+
+.my-button {
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    border: none;
+    color: var(--color-white);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.my-button:hover {
+    background-color: var(--color-primary-variant);
+}
+
+.svg-container {
+    display: flex;
+    align-items: center;
+}
+
+.moving__svg {
+    margin-left: 10px;
+    max-width: 50px;
+    height: auto;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.moving__svg:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.moving__svg:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.moving__svg:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    75% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.popup-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; 
+}
+
+.popup {
+    max-width: 80%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.popup h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.popup p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.popup-close-button {
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.popup-close-button:hover {
+    background-color: #bbb;
+}

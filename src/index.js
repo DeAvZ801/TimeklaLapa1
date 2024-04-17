@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './TimeklaVietne';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,4 +11,6 @@ root.render(
   </React.StrictMode>
 );
 
-reportWebVitals();
+function logMetrics(metric) {
+    console.log(metric);
+}
