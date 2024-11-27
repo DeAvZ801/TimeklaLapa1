@@ -6,11 +6,5 @@ import App from './TimeklaVietne';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <App />
-  </React.StrictMode>
 );
-
-function logMetrics(metric) {
-    console.log(metric);
-}
